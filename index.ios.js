@@ -8,10 +8,11 @@ var {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  Component
 } = React;
 
-class GithubBrowser extends React.Component {
+class GithubBrowser extends Component {
   render(){
     return(
       <Login/>
