@@ -32,7 +32,8 @@ var styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     flex: 1,
     paddingTop: 120,
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: 10
   },
   logo: {
     width: 96,
@@ -44,8 +45,8 @@ var styles = StyleSheet.create({
   },
   input: {
     height: 50,
-    marginTop: 10,
-    padding: 4,
+    marginTop: 20,
+    padding: 10,
     fontSize: 18,
     borderWidth: 1,
     borderColor: '#48BBEC'
