@@ -27,16 +27,14 @@ class Login extends Component {
     return(
       <View style={styles.container}>
         <View style={styles.logoContainer}>
-          <Image
-            style={styles.logo}
-            source={require('image!logotype-bar-positive')} />
-          <Text style={styles.heading}>Connect</Text>
+          <Text style={styles.headingLeft}>MyIBM </Text>
+          <Text style={styles.headingRight}>Nexus</Text>
         </View>
-        <Text style={styles.label}>IBM iD</Text>
+        <Text style={styles.label}>IBMiD</Text>
         <TextInput
           onChangeText={(text) => this.setState({username: text})}
           style={styles.input}
-          placeholder="Please enter your IBM ID" />
+          placeholder="Please enter your IBMiD" />
         
         <Text style={styles.label}>Password</Text>
         <TextInput 
@@ -55,6 +53,7 @@ class Login extends Component {
         <ActivityIndicatorIOS
           animating={this.state.showProgress}
           size="large"
+          color="#14998E"
           style={styles.loader}
           />
       </View>
@@ -71,23 +70,30 @@ class Login extends Component {
 
 var styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FDFBFB',
     flex: 1,
-    paddingTop: 120,
+    paddingTop: 100,
     padding: 20
   },
   logoContainer: {
     flexDirection: 'row',
-    marginBottom: 10
+    marginBottom: 10,
+    justifyContent: 'center'
   },
   logo: {
     width: 150,
     height: 65
   },
-  heading: {
+  headingRight: {
     fontSize: 30,
     marginTop: 32,
-    color: '#5294E9'
+    color: '#00B4A0'
+  },
+  headingLeft: {
+    fontSize: 30,
+    fontWeight: 'bold',    
+    marginTop: 32,
+    color: '#586464'
   },
   input: {
     height: 50,
@@ -95,8 +101,8 @@ var styles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
     borderWidth: 1,
-    borderColor: '#2F5DB0',
-    color: '#2F5DB0'
+    borderColor: '#00B4A0',
+    color: '#000000'
   },
   label: {
     alignItems: 'flex-start',
@@ -108,7 +114,7 @@ var styles = StyleSheet.create({
     alignSelf: 'stretch',
     justifyContent: 'center',
     marginTop: 25,
-    backgroundColor: '#2F5DB0'
+    backgroundColor: '#00B4A0'
   },
   buttonText: {
     color: 'white',
@@ -116,7 +122,8 @@ var styles = StyleSheet.create({
     fontSize: 22
   },
   loader: {
-    marginTop: 30
+    marginTop: 30,
+    alignSelf: 'center'
   }
 });
 
