@@ -34,8 +34,7 @@ class Login extends Component {
         <TextInput
           onChangeText={(text) => this.setState({username: text})}
           style={styles.input}
-          placeholder="Please enter your IBMiD" />
-        
+          placeholder="Please enter your IBMiD" />   
         <Text style={styles.label}>Password</Text>
         <TextInput 
           onChangeText={(text) => this.setState({password: text})}
@@ -65,8 +64,18 @@ class Login extends Component {
     this.setState({
       showProgress: true
     });
+
+    fetch('https://api.github.com/search/repositories?q=react')
+    .then((response)=>{
+      return response.json();
+    })
+    .then((results)=>{
+      console.log(results);
+      this.setState({showProgress: false});
+    });
   }
-};
+
+}; //end Login class
 
 var styles = StyleSheet.create({
   container: {
