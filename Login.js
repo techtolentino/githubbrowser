@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react-native');
+var buffer = require('buffer');
 
 var {
   AppRegistry,
@@ -11,7 +12,7 @@ var {
   Image,
   TouchableHighlight,
   Component,
-  ActivityIndicatorIOS
+  ActivityIndicatorIOS,
 } = React;
 
 class Login extends Component {
@@ -39,7 +40,7 @@ class Login extends Component {
         <TextInput 
           onChangeText={(text) => this.setState({password: text})}
           style={styles.input}
-          secureTextEntry="true"
+          password="true"
           placeholder="Password" />
         
         <TouchableHighlight
@@ -64,6 +65,9 @@ class Login extends Component {
     this.setState({
       showProgress: true
     });
+
+    var b = new buffer.Buffer('hello');
+    console.log(b.toString('base64'));
 
     fetch('https://api.github.com/search/repositories?q=react')
     .then((response)=>{
