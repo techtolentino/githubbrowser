@@ -27,8 +27,8 @@ class Login extends Component {
     return(
       <View style={styles.container}>
         <View style={styles.logoContainer}>
-          <Text style={styles.headingLeft}>MyIBM </Text>
-          <Text style={styles.headingRight}>Nexus</Text>
+          <Text style={styles.headingLeft}>ToCode </Text>
+          <Text style={styles.headingRight}>App</Text>
         </View>
         <Text style={styles.label}>IBMiD</Text>
         <TextInput
