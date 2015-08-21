@@ -66,10 +66,15 @@ class Login extends Component {
       showProgress: true
     });
 
-    var b = new buffer.Buffer('hello');
+    var b = new buffer.Buffer(this.state.username + ':' + this.state.password);
+    var encodeAuth = b.toString('base64');
     console.log(b.toString('base64'));
 
-    fetch('https://api.github.com/search/repositories?q=react')
+    fetch('https://api.github.com/user',{
+      headers: {
+        'Authorization' : 'Basic ' + encodeAuth
+      }
+    })
     .then((response)=>{
       return response.json();
     })
