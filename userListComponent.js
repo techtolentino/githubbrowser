@@ -17,9 +17,12 @@ class userList extends Component {
         <View style={styles.listItem}>
           <Image
             style={styles.userImage}
-            source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
+            source={{uri: 'https://randomuser.me/api/portraits/med/men/8.jpg'}}
           />
-          <Text>John Doe</Text>
+          <View style={styles.userInfo}>
+            <Text style={styles.userName}>Marshall Hart</Text>
+            <Text style={styles.userRole}>UX Design, UI Design</Text>
+          </View>
         </View>
       </View>
     );
@@ -36,17 +39,26 @@ var styles = StyleSheet.create({
     padding: 20
   },
   listItem: {
-    padding: 20,
+    flexDirection: 'row',
+    padding: 15,
     borderWidth: 0.5,
     borderTopColor: '#D8D8D8',
     borderLeftColor: 'white',
     borderRightColor: 'white',
-    borderBottomColor: '#D8D8D8'
+    borderBottomColor: '#D8D8D8',
   },
   userImage: {
-    height: 40,
-    width: 40,
-    borderRadius: 20
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+  },
+  userName: {
+    left: 15,
+    fontWeight: 'bold'
+  },
+  userRole: {
+    left: 15,
+    color: '#929292'
   }
 });
 
