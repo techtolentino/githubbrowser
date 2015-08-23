@@ -2,6 +2,7 @@
 
 var React = require('react-native');
 var Login = require('./Login');
+var UserList = require('./userListComponent');
 
 var {
   AppRegistry,
@@ -15,7 +16,7 @@ var {
 class GithubBrowser extends Component {
   render(){
     return(
-      <Login/>
+      <UserList/>
     );
   }
 };

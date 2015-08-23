@@ -4,7 +4,6 @@ var React = require('react-native');
 var buffer = require('buffer');
 
 var {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
