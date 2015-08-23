@@ -27,8 +27,6 @@ class userList extends Component {
       </View>
     );
   }
-
-
 }; //end Login class
 
 var styles = StyleSheet.create({
