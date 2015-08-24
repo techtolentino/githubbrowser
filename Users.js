@@ -10,18 +10,19 @@ var {
   Component
 } = React;
 
-class userList extends Component {
+class users extends Component {
   render(){
     return(
-      <View style={styles.container}>
+      <View style={styles.listItemContainer}>
         <View style={styles.listItem}>
           <Image
             style={styles.userImage}
-            source={{uri: 'https://randomuser.me/api/portraits/med/men/8.jpg'}}
+            source={{uri: this.props.uri}}
           />
           <View style={styles.userInfo}>
-            <Text style={styles.userName}>Marshall Hart</Text>
-            <Text style={styles.userRole}>UX Design, UI Design</Text>
+            <Text style={styles.userName}>{this.props.userName}</Text>
+            <Text style={styles.userOrganization}>{this.props.userOrganization}</Text>
+            <Text style={styles.userRole}>{this.props.userJobTitle}</Text>
           </View>
         </View>
       </View>
@@ -30,11 +31,9 @@ class userList extends Component {
 }; //end Login class
 
 var styles = StyleSheet.create({
-  container: {
+  listItemContainer: {
     backgroundColor: '#FDFBFB',
     flex: 1,
-    paddingTop: 80,
-    padding: 20
   },
   listItem: {
     flexDirection: 'row',
@@ -57,9 +56,13 @@ var styles = StyleSheet.create({
   userRole: {
     left: 15,
     color: '#929292'
+  },
+  userOrganization: {
+    left: 15,
+    color: '#929292'
   }
 });
 
 
-module.exports = userList;
+module.exports = users;
 
