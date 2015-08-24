@@ -20,6 +20,18 @@ class UsersList extends React.Component {
           uri: 'https://randomuser.me/api/portraits/med/men/8.jpg'
         },
         {
+          userName: 'Rob Finch',
+          userJobTitle: 'IT Manager',
+          userOrganization: 'Reliant Tech',
+          uri: 'https://randomuser.me/api/portraits/med/men/59.jpg'
+        },
+        {
+          userName: 'Lauryn Xi',
+          userJobTitle: 'Marketing Manager',
+          userOrganization: 'Quest Media Inc',
+          uri: 'https://randomuser.me/api/portraits/women/15.jpg'
+        },
+        {
           userName: 'Ashley Jacobs',
           userJobTitle: 'Software Administrator',
           userOrganization: 'App Fannie',
@@ -68,7 +80,7 @@ class UsersList extends React.Component {
 
 var styles = StyleSheet.create({
   container: {
-    height: 500
+    marginTop: 50
   }
 });
 
