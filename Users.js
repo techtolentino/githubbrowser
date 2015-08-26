@@ -13,13 +13,15 @@ var {
 
 var swipeLeft = [
 {
-    text: 'Left Side'
+    text: 'Delete',
+    backgroundColor: '#F45535',
   }
 ]
 
 var swipeRight = [
   {
-    text: 'Right Side'
+    text: 'Add',
+    backgroundColor: '#53CFA9',
   }
 ]
 
@@ -30,8 +32,7 @@ class users extends Component {
       <Swipeout 
         right={swipeRight}
         left={swipeLeft}
-        autoClose="yes"
-        close="yes"
+        autoClose="true"
       >
         <View style={styles.listItemContainer}>
           <View style={styles.listItem}>
