@@ -1,7 +1,6 @@
 var React = require('react-native');
 var Users = require('./Users');
 
-
 var { ListView, StyleSheet } = React;
 
 class UsersList extends React.Component {

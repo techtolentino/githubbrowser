@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react-native');
+var Swipeout = require('react-native-swipeout')
 
 var {
   StyleSheet,
@@ -10,22 +11,42 @@ var {
   Component
 } = React;
 
+var swipeLeft = [
+{
+    text: 'Left Side'
+  }
+]
+
+var swipeRight = [
+  {
+    text: 'Right Side'
+  }
+]
+
+
 class users extends Component {
   render(){
     return(
-      <View style={styles.listItemContainer}>
-        <View style={styles.listItem}>
-          <Image
-            style={styles.userImage}
-            source={{uri: this.props.uri}}
-          />
-          <View style={styles.userInfo}>
-            <Text style={styles.userName}>{this.props.userName}</Text>
-            <Text style={styles.userOrganization}>{this.props.userOrganization}</Text>
-            <Text style={styles.userRole}>{this.props.userJobTitle}</Text>
+      <Swipeout 
+        right={swipeRight}
+        left={swipeLeft}
+        autoClose="yes"
+        close="yes"
+      >
+        <View style={styles.listItemContainer}>
+          <View style={styles.listItem}>
+            <Image
+              style={styles.userImage}
+              source={{uri: this.props.uri}}
+            />
+            <View style={styles.userInfo}>
+              <Text style={styles.userName}>{this.props.userName}</Text>
+              <Text style={styles.userOrganization}>{this.props.userOrganization}</Text>
+              <Text style={styles.userRole}>{this.props.userJobTitle}</Text>
+            </View>
           </View>
         </View>
-      </View>
+      </Swipeout>
     );
   }
 }; //end Login class
